@@ -1,0 +1,18 @@
+.cartListView {
+    -fx-background-color: black;
+    -fx-control-inner-background: black;
+    -fx-text-fill: white;
+    -fx-border-color: white;
+    -fx-border-width: 1px;
+    -fx-font-size: 14px;
+}
+
+.cartListView .list-cell {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}
+
+.cartListView .list-cell:selected {
+    -fx-background-color: #333333;
+    -fx-text-fill: white;
+}

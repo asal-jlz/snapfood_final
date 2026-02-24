@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SellerDashboardController" >
+   <children>
+      <ImageView fitHeight="408.0" fitWidth="606.0" layoutX="-3.0">
+         <image>
+            <Image url="@/pictures/Screenshot 1404-04-28 at 17.45.17.png" />
+         </image>
+      </ImageView>
+      <GridPane prefHeight="408.0" prefWidth="606.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="299.0" minWidth="10.0" prefWidth="147.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="470.0" minWidth="10.0" prefWidth="459.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="198.0" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="354.0" minHeight="10.0" prefHeight="350.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+               <children>
+                  <AnchorPane prefHeight="60.0" prefWidth="459.0">
+                     <children>
+                        <Label fx:id="welcomeLabel" text="Welcome, Seller">
+                           <font>
+                              <Font name="AppleGothic Regular" size="20.0" />
+                           </font>
+                           <padding>
+                              <Insets left="150.0" top="10.0" />
+                           </padding>
+                        </Label>
+                        <ImageView fitHeight="5.0" fitWidth="453.0" layoutY="56.0">
+                           <image>
+                              <Image url="@/pictures/Screenshot 1404-04-28 at 18.12.02.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="restaurantLogo" fitHeight="58.0" fitWidth="54.0" layoutX="399.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image  url="@/pictures/Screenshot 1404-04-29 at 09.08.51.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="54.0" fitWidth="74.0" layoutX="6.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="59.0" fitWidth="147.0">
+                           <image>
+                              <Image url="@/pictures/Screenshot 1404-04-26 at 21.41.47.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="30.0" layoutY="17.0" text="Dashboard" textFill="WHITE">
+                           <font>
+                              <Font name="AppleGothic Regular" size="18.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="5.0" fitWidth="150.0" layoutY="57.0">
+                           <image>
+                              <Image url="@/pictures/Screenshot 1404-04-28 at 18.12.02.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="58.0" fitWidth="6.0" layoutX="147.0" layoutY="1.0">
+                           <image>
+                              <Image url="@/pictures/Screenshot 1404-04-28 at 18.12.02.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+               <children>
+                  <AnchorPane prefHeight="362.0" prefWidth="147.0">
+                     <children>
+                        <ImageView fitHeight="350.0" fitWidth="147.0" layoutY="3.0">
+                           <image>
+                              <Image url="@/pictures/Screenshot 1404-04-26 at 21.41.47.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="353.0" fitWidth="6.0" layoutX="147.0">
+                           <image>
+                              <Image url="@/pictures/Screenshot 1404-04-28 at 18.12.02.png" />
+                           </image>
+                        </ImageView>
+                        <VBox layoutY="3.0" prefHeight="350.0" prefWidth="147.0">
+                           <children>
+                              <Button fx:id="addFoodBtn" onAction="#handleAddFood" mnemonicParsing="false" styleClass="transparent-button" stylesheets="@/css/transparent-button.css" text="Add New Food Item">
+                                 <VBox.margin>
+                                    <Insets left="5.0" top="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button  fx:id="editMenuBtn" onAction="#handleEditMenu" mnemonicParsing="false" styleClass="transparent-button" stylesheets="@/css/transparent-button.css" text="Edit Menu">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="30.0" top="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button fx:id="viewOrdersBtn" onAction="#handleViewOrders" mnemonicParsing="false" styleClass="transparent-button" stylesheets="@/css/transparent-button.css" text="View Orders">
+                                 <VBox.margin>
+                                    <Insets left="25.0" top="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button fx:id="editProfileBtn" onAction="#handleEditProfile" mnemonicParsing="false" styleClass="transparent-button" stylesheets="@/css/transparent-button.css" text="Edit Profile">
+                                 <VBox.margin>
+                                    <Insets left="25.0" top="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button fx:id="logoutBtn" onAction="#handleLogout" mnemonicParsing="false"
+                                      styleClass="transparent-button" stylesheets="@/css/transparent-button.css" text="Logout">
+                                 <VBox.margin>
+                                    <Insets left="30.0" top="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <TableView fx:id="foodTable" layoutX="12.0" layoutY="7.0" prefHeight="321.0" prefWidth="438.0" stylesheets="@/css/dashboard.css">
+                    <columns>
+                      <TableColumn fx:id="nameCol" prefWidth="85.0" text="Name" />
+                      <TableColumn fx:id="priceCol" prefWidth="75.0" text="Price" />
+                        <TableColumn fx:id="categoryCol" prefWidth="85.0" text="Category" />
+                        <TableColumn fx:id="descriptionCol" prefWidth="120.0" text="Description" />
+                        <TableColumn fx:id="actionsCol" prefWidth="75.0" text="Actions" />
+                       <TableColumn fx:id="photoCol" prefWidth="75.0" text="Photo" />
+                    </columns>
+                  </TableView>
+                  <TableView fx:id="ordersTable" layoutX="12.0" layoutY="7.0" prefHeight="321.0" prefWidth="438.0" visible="false">
+                     <columns>
+                        <TableColumn fx:id="orderIdCol" text="Order ID" prefWidth="75.0"/>
+                        <TableColumn fx:id="buyerNameCol" text="Buyer" prefWidth="100.0"/>
+                        <TableColumn fx:id="foodListCol" text="Items" prefWidth="150.0"/>
+                        <TableColumn fx:id="totalPriceCol" text="Total" prefWidth="75.0"/>
+                     </columns>
+                  </TableView>
+
+                  <Button fx:id="uploadPhotoBtn" text="Upload Photo" onAction="#handleUploadPhoto" layoutX="350.0" layoutY="10.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

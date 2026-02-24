@@ -1,0 +1,46 @@
+/* TableView Styling */
+.table-view {
+    -fx-border-color: rgb(41, 41, 41);
+    -fx-border-width: 1;
+    -fx-border-radius: 2px;
+    -fx-background-color: rgb(206, 205, 205);
+}
+
+/* Header Row */
+.table-view .column-header-background {
+    -fx-background-color: rgb(47, 47, 47);
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 40px;
+}
+
+.table-view .table-column {
+    -fx-border-color: transparent transparent #ccc transparent; /* column separators */
+    -fx-border-width: 0 0 1 0;
+}
+
+/* Rows */
+.table-row-cell {
+    -fx-border-color: #e0e0e0; /* row separators */
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 8px;
+    -fx-font-size: 13px;
+    -fx-background-color: white;
+}
+
+/* Alternating rows (optional) */
+.table-row-cell:odd {
+    -fx-background-color: #f9f9f9;
+}
+
+/* Hover row highlight */
+.table-row-cell:hover {
+    -fx-background-color: #eef6ff;
+}
+
+/* Header text */
+.table-view .column-header .label {
+    -fx-text-fill: rgb(0, 0, 0);
+    -fx-font-weight: bold;
+}

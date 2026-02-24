@@ -1,0 +1,29 @@
+.tab-pane {
+    -fx-background-color: transparent;
+}
+
+.tab-pane .tab-header-area {
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+    -fx-border-width: 0 0 2 0; 
+}
+
+.tab-pane .tab {
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+    -fx-border-color: transparent;
+}
+
+.tab-pane .tab:selected {
+    -fx-background-color: rgba(255, 255, 255, 0.1); /* subtle highlight */
+    -fx-text-fill: white;
+}
+
+.tab-pane .tab-label {
+    -fx-text-fill: black;
+}
+
+.tab-pane .tab-content-area {
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+}

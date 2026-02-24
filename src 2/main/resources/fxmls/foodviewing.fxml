@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/24.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="controller.FoodViewingController"
+            prefWidth="350.0" prefHeight="140.0">
+
+   <children>
+      <HBox spacing="8"
+            AnchorPane.topAnchor="0.0"
+            AnchorPane.bottomAnchor="0.0"
+            AnchorPane.leftAnchor="0.0"
+            AnchorPane.rightAnchor="0.0">
+         <padding>
+            <Insets top="5.0" right="5.0" bottom="5.0" left="5.0"/>
+         </padding>
+
+
+         <!-- Food Image -->
+         <ImageView fx:id="foodImageView" fitHeight="120.0" fitWidth="80.0">
+            <image>
+               <Image url="@/pictures/Unknown-3.jpg" />
+            </image>
+         </ImageView>
+
+         <!-- Right Section -->
+         <VBox spacing="4" prefWidth="240.0">
+
+            <!-- Top: Restaurant Name & Logo -->
+            <HBox spacing="8" alignment="CENTER_LEFT">
+               <VBox spacing="2">
+                  <Label fx:id="restaurantNameLabel" text="Borcelle Pasta">
+                     <font>
+                        <Font name="Al Nile" size="10.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="foodNameLabel" text="Fettuccine Alfredo" style="-fx-font-weight: bold;">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+               </VBox>
+               <ImageView fx:id="restaurantLogo" fitHeight="40.0" fitWidth="40.0">
+                  <image>
+                     <Image url="@/pictures/Screenshot 1404-04-31 at 09.55.45.png" />
+                  </image>
+               </ImageView>
+            </HBox>
+
+            <!-- Description -->
+            <Label fx:id="foodDescriptionLabel"
+                   text="Creamy Shrimp Fettuccine Pasta With Alfredo Sauce"
+                   wrapText="true" maxWidth="200.0">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+
+            <!-- Price and Category -->
+            <HBox spacing="15">
+               <Label fx:id="foodPriceLabel" text="Price: $0.00">
+                  <font>
+                     <Font size="10.0" />
+                  </font>
+               </Label>
+               <Label fx:id="foodCategoryLabel" text="Category: pasta">
+                  <font>
+                     <Font size="10.0" />
+                  </font>
+               </Label>
+               <Button fx:id="addToCartButton" text="Add to Cart" prefHeight="16" prefWidth="70"/>
+            </HBox>
+
+            <!-- Opinion + Rating + Buttons -->
+            <HBox spacing="5">
+               <TextArea fx:id="opinionTextArea"
+                         promptText="opinion about food"
+                         prefWidth="90.0" prefHeight="20.0"
+                         wrapText="true"/>
+               <TextField fx:id="ratingTextField" promptText="Rate"
+                          prefWidth="30.0" />
+               <Button fx:id="photoButton" text="photo" prefWidth="30.0"
+                       onAction="#onPhotoButtonClick"/>
+               <Button fx:id="submitButton" text="submit" prefWidth="40.0"
+                       onAction="#onSubmitButtonClick"/>
+            </HBox>
+         </VBox>
+      </HBox>
+   </children>
+</AnchorPane>

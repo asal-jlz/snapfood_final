@@ -1,0 +1,18 @@
+.Update-button {
+    -fx-background-color: rgb(255, 230, 0);
+    -fx-text-fill: black;
+    -fx-border-color: black;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-font-size: 17px;
+    -fx-font-family: "Arial";
+    -fx-cursor: hand;
+    -fx-padding: 8px 16px;
+}
+
+.login-button:hover {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-border-color: rgb(255, 230, 0);
+}
